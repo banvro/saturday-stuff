@@ -1,0 +1,131 @@
+test.html
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form id="myForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter name">
+            <span id="nameError" style="color: red;"></span>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter email">
+            <span id="emailError" style="color: red;"></span>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter password">
+            <span id="passwordError" style="color: red;"></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the input values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Reset error messages
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("passwordError").textContent = "";
+
+            // Simple validation checks
+            if (name.trim() === "") {
+                document.getElementById("nameError").textContent = "Name cannot be empty.";
+                return;
+            }
+
+            if (email === "") {
+                document.getElementById("emailError").textContent = "Email cannot be empty.";
+                return;
+            }
+
+            if (password.length < 6) {
+                if (password.length === 0) {
+                    document.getElementById("passwordError").textContent = "Enter something.";
+                } else {
+                    document.getElementById("passwordError").textContent = "Password must be at least 6 characters long.";
+                }
+                return;
+            }
+
+            // If all validations pass, store the form data in local storage
+            var formData = {
+                name: name,
+                email: email,
+                password: password
+            };
+            localStorage.setItem("formData", JSON.stringify(formData));
+            localStorage.setItem("xxyyyzz", "yyyyyyyyyyyyyy",(formData));
+            // Redirect to the next page (you can change this URL)
+            window.location.href = "page.html";
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+page.html
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+</head>
+<body>
+    <h1>Data from Local Storage</h1>
+    <div>
+        <strong>Name:</strong> <span id="name"></span>
+    </div>
+    <div>
+        <strong>Email:</strong> <span id="email"></span>
+    </div>
+    <div>
+        <strong>Password:</strong> <span id="password"></span>
+    </div>
+
+    <script>
+        // Retrieve data from local storage
+        var storedData = localStorage.getItem("formData");
+
+        // Check if data exists in local storage
+        if (storedData) {
+            // Parse the JSON data
+            var formData = JSON.parse(storedData);
+
+            // Populate the HTML with retrieved data
+            document.getElementById("name").textContent = formData.name;
+            document.getElementById("email").textContent = formData.email;
+            document.getElementById("password").textContent = formData.password;
+        } else {
+            // Handle the case where no data exists in local storage
+            alert("No data found in local storage.");
+        }
+    </script>
+</body>
+</html>
