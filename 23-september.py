@@ -288,6 +288,345 @@
 
 
 
+# 3) Encapsulation : to bind up multipal things in a single unit
+
+
+# Access Spacifiers
+# 1) Public Mambers
+# 2) Private Mambers __
+# 3) protected mambers _
+
+# class cls1:
+#     def __init__(self):
+#         self.__a = 10
+#         self.b = 20
+    
+#     def sumthis(self):
+#         print(self.__a + self.b)
+    
+# class cls2(cls1):
+#     def hlo(self):
+#         print(self._cls1__a)
+        
+# obj = cls2()
+# obj.hlo()
+
+# obj = cls1()
+# print(obj.b)
+
+
+
+# Polymorphiusm  :
+
+# poly  : many
+
+# morphiusm  : forms
+
+# types of polymorphium : 
+# 1) compile time polymorphisum
+    # 2) method overloading
+    # 3) operator overloading
+
+# 2) run time polymorphiusm
+    # 5) method overriding
+
+
+# 1) Duck typing
+# 2) method overloading
+# 3) operator overloading
+# 5) method overriding
+
+# class cls1:
+#     def helo(self):
+#         print("i am for class 1")
+
+# class cls2:
+#     def helo(self):
+#         print("i am form class 2")
+
+# obj1 = cls1()
+# obj2 = cls2()
+
+# def show(x):
+#     x.helo()
+
+# show(obj2)
+
+
+# 1) operator overloading
+
+# a = 10
+
+# a = 100
+
+# print(a)
+
+
+# a + b
+
+
+# 10 + 20
+
+# operator = +
+# operands = 10, 20
+
+
+# a = 10
+# b = 20
+
+# c = a + b
+
+
+
+
+
+
+
+# a = 10
+# b = "12"
+
+# print(a + b)
+
+
+# class cls1:
+#     def __init__(self, a, b):
+#         self.a = a
+#         self.b = b
+    
+#     def sumx(self):
+#         print("askjdb")
+    
+#     def __add__(first, second):
+#         qw = first.a + second.a
+#         wq = first.b + second.b
+#         sum = cls1(qw, wq)
+#         return sum
+        
+# obj1 = cls1(10, 30)
+# obj2 = cls1(30, 90)
+
+# xc = obj1 + obj2
+# print(xc.b)
+
+# a = 10
+# a = 100
+
+
+
+# 3) method overloading:
+
+# class cls1:
+#     def sumthis(self, a, b, c):
+#         zx = a + b + c
+#         print(zx)
+    
+#     def sumthis(self, a, b):
+#         zx = a + b
+#         print(zx)
+    
+#     def sumthis(self, a):
+#         zx = a
+#         print(zx)
+
+# obj = cls1()
+# obj.sumthis(10)
+
+
+# class xyz:
+#     def sumthis(self, a = None, b = None, c = None):
+#         if a != None and b != None and c != None:
+#             zx = a + b + c
+#             print(zx)
+        
+#         elif a != None and b != None:
+#             zx = a + b
+#             print(zx)
+        
+#         elif a != None:
+#             zx = a
+#             print(zx)
+
+# obj = xyz()
+# obj.sumthis(12)
+
+
+# 4) method overriding:
+
+# a = 10
+# a = 100
+
+# class xyz:
+#     def mthd1(self):
+#         print("i am a mthod1 ")
+    
+#     def mthd2(self):
+#         print("iam mrhod 2")
+
+# class pqr(xyz):
+#     def mthd1(self):
+#         print("i ma ffrom clsss pqr")
+
+# obj = pqr()
+# obj.mthd1()
+
+
+
+
+
+
+
+
+
+
+
+# Functions 
+
+# lambda 
+# map()
+# filter()
+# reduce()
+
+
+# lambda function 
+
+# def sumthis(a, b):
+#     c = a + b
+#     print(c)
+    
+# sumthis(12, 20)
+
+
+# lambda arguments : expression
+
+# zx = lambda a, b : a + b
+
+# print(zx(12, 10))
+
+
+# sq = lambda a : a + 20000
+
+# print(sq(10))
+
+
+
+# map() : 
+
+
+# lst = [2, 6, 7, 10, 9, 78, 100]
+
+# # map(function itrater )
+
+# zx = map(lambda i : i + 10, lst)
+
+# print(list(zx))
+
+
+
+# filter(function, itrater,)
+
+# zx = [12, 10, 9, 67, 56, 30, 31, 91]
+
+# zx = filter(lambda a : a % 2 != 0, zx)
+# print(list(zx))
+
+# reduce
+
+# from functools import reduce
+
+# ae = [12, 10, 20, 1, 2, 3]
+
+
+# zx = reduce(lambda a, b : a + b, ae)
+
+# print(zx)
+
+# b = 0
+# for i in a:
+#     b = b + i
+
+# print(b)
+
+
+
+# comperhension :
+
+# []
+# ()
+
+# zx = [i for i in range(1, 10) if i % 2 == 0]
+
+# print(zx)
+
+
+
+# [expression loop condation]
+
+zx = int(input("ENter number of inputes your wish to enter : "))
+
+inp = [int(input(f"Enter #{i + 1} number : "))for i in range(zx) ]
+
+
+# print(inp)
+
+# print(sum(inp))
+# q = 0
+# for i in inp:
+#     q = q + i
+    
+
+# print(q)
+
+def xyz(*a):
+    print(a)
+
+xyz(*inp)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
