@@ -14,3 +14,56 @@ mtch = re.finditer(ptr, text)
 
 for i in mtch:
     print(i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import threading
+
+print("hello...")
+
+class xyz:
+    def mthd1(self):
+        for i in range(100):
+            print("yessss")
+        
+    def mthd2(self):
+        for i in range(100):
+            print("nooooo....")
+
+obj = xyz()
+
+th1 = threading.Thread(target = obj.mthd1)
+th2 = threading.Thread(target = obj.mthd2)
+
+th1.start()
+th2.start()
+# obj.mthd1()
+# obj.mthd2()
+
+print("i am running...")
+
+print("working")
+
+th1.join()
+th2.join()
+
+print("done")
+
+
+a = 10
+b = 20
+
+c=  a + b
+
+d = c + 10
