@@ -123,3 +123,78 @@
 # print(match)
 
 
+# Multithreading : 
+
+
+# Multithreading 
+
+# a = 10
+
+# b = 20
+
+# c = a + b
+
+# print("hellowww")
+
+# print("imporetnet")
+
+# print("done")
+
+
+
+# import threading
+
+# def fun1():
+#     for i in range(100):
+#         print("heyyyyyyyyy")
+    
+# def fun2():
+#     for i in range(500):
+#         print("noooooooooo")
+
+# print("code start...")
+
+# fun1()
+
+# fun2()
+
+# th1 = threading.Thread(target = fun1)
+# th2 = threading.Thread(target = fun2)
+
+# th1.start()
+# th2.start()
+
+# print("important code")
+
+# print("helloooo")
+
+# print("goooooo")
+
+# print("done")
+
+
+
+import mysql.connector
+
+
+
+con = mysql.connector.connect(host = "localhost", username = "root", password = "1234", database = "saturday")
+
+courser = con.cursor()
+
+courser.execute("insert into saturdayclass values('Python', '823485542', 'python@gmail.com')")
+con.commit()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
