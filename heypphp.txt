@@ -1,0 +1,167 @@
+/*
+
+<!--OOP's : -->
+<!--    1) classes-->
+<!--    2) object-->
+<!--    3) methods-->
+<!--    4) Attributes-->
+<!--    5) self-->
+<!--    6) constructer-->
+<!--        7) Inheritance-->
+<!--            1) Single level inheritance-->
+<!--            2) multilevel inheritnace-->
+<!--            3) Multiple Inheritance-->
+<!--            4) Hirarichical Inheritance-->
+<!--            5) Hybrid Inheritance-->
+        
+<!--        8) Abstraction:-->
+<!--            1) Abstract Class-->
+<!--            2) Abstract Method-->
+<!--            3) Interfaces-->
+            
+<!--        9) Encapsulation:-->
+<!--            Access Spacifires-->
+<!--                1) Public Mambers-->
+<!--                2) Protected Mambers-->
+<!--                3) Private Mambers-->
+            
+<!--        10) Polymorphism:-->
+<!--            1) Complile Time Polymorphism-->
+<!--                1) Method overloading-->
+<!--                2) Operator Overloading-->
+                
+<!--            2) Run time Polymorphism-->
+<!--                1) Method Overriding-->
+
+*/
+ <?php
+
+    echo "Try programiz.pro";
+?>
+
+
+
+
+
+
+
+
+<?php
+//     class : class is a blueprint of an object.
+// object : object is an instance of a class.
+
+    // class firstclass {
+        
+    //     public function method1(){
+    //         echo "this is method 1";
+    //     }
+        
+    //     public function method(){
+    //         echo "this is method 2";
+    //     }
+    // }
+    
+    // $obj = new firstclass();
+    
+    // $obj->method1();
+    // $obj->method();
+    
+    
+    // Constructer : is a spacial method in a class. the main functionality of Constructer is, it exceute automatically while we create a object if a class. to create a construtot we have spacial keyword __construct.
+    
+    
+    // class leanconst {
+        
+    //     public function __construct(){
+    //         echo "this is constructor";
+    //     }
+        
+    //     public function method1(){
+    //         echo "this is method 1";
+    //     }
+        
+    // }
+    
+    // $xyz = new leanconst()
+    
+    
+    
+    
+    
+    // class leanconst {
+        
+    //     public function method1($x, $y){
+    //         echo $x + $y;
+    //     }
+        
+    //     public function method2(){
+    //         echo $x;
+    //     }
+        
+    // }
+    
+    // $xyz = new leanconst();
+    // $xyz->method1(10, 30);
+    // $xyz->method2()
+    
+    
+    
+    class leanconst {
+        
+        // properties
+        public $xyz;
+        public $abc;
+        
+        public function __construct($xyz, $abc){
+            // echo "this is constructor";
+            $this->x = $xyz;
+            $this->y = $abc;
+        }
+        
+        
+        public function method1(){
+            echo $this->x + $this->y;
+        }
+        
+        public function method2(){
+            echo $this->y;
+        }
+        
+    }
+    
+    $xyz = new leanconst(100, 500);
+    $xyz->method1();
+    $xyz->method2()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+?>
+
+
