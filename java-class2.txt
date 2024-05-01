@@ -1,0 +1,84 @@
+import java.util.Arrays;
+import java.util.OptionalDouble;
+import java.util.OptionalInt;
+
+public class Main {
+    public static void main(String[] args) {
+
+//        System.out.println("Hello world!");
+
+//        creating an array
+
+//        int[] stu_marcks = new int[4];
+
+//        adding elements in array
+
+//        arrayname[indexnumber] = element
+
+//        stu_marcks[0] = 400;
+//        stu_marcks[1] = 100;
+//        stu_marcks[2] = 10;
+//        stu_marcks[3] = 20;
+
+//        System.out.println(stu_marcks[2]);
+
+//        int length = stu_marcks.length;
+
+//        System.out.println(length);
+
+//        System.out.println(Arrays.stream(stu_marcks).min());
+
+//        int sum2 = Arrays.stream(stu_marcks).sum();
+//
+//        System.out.println("the sum of array elemets is : " + sum2);
+//
+////         int[] xyz = Arrays.stream(stu_marcks).sorted();
+//
+//        int [] xyz = stu_marcks.clone();
+
+
+
+//    [12, 34, 56, 67, 89, 90]
+
+
+        int [] array = {12, 34, 23, 34, 25, 67};
+
+        System.out.println(array[4]);
+
+//        Arrays.sort(array);
+//
+//
+//        System.out.println(Arrays.toString(array));
+
+        OptionalDouble xyz = Arrays.stream(array).average();
+
+        System.out.println(xyz);
+
+        OptionalInt x = Arrays.stream(array).min();
+
+        System.out.println(x);
+
+        array.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+}
