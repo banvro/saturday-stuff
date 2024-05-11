@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+
+{% block xyz %}
+
+
+
+<div style="padding-left: 7%; padding-right: 7%; padding-top: 3%;">
+    <div class="row">
+       
+        {% for x in mydata %}
+        
+        <div class="col-sm-6 mb-3 mb-sm-0">
+          <div class="card" style="margin-bottom: 20px;">
+            <div class="card-body">
+              <img src="{{x.image_path}}" alt="">
+              <h5 class="card-title">{{x.fullname}}</h5>
+              <p class="card-text"><b>Email : </b> {{x.email}}</p>
+              <p class="card-text"><b>Phone Number : </b> {{x.phone_number}}</p>
+              <p class="card-text"><b>Message : </b>{{x.message}}</p>
+              <p class="card-text">{{x.date}}</p>
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              <div>
+                <a href="/update/{{x.id}}"><button class="btn btn-success">Update</button></a>
+                <a href="/deletethisdata/{{x.id}}"><button class="btn btn-danger">Delete</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        
+      </div>
+</div>
+
+{% endblock xyz %}
