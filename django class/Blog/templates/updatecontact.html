@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">  
+
+      {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+      {% endif %}
+
+        <form id="contact" action="/updatedatanow/{{data.id}}" method="post">
+          {% csrf_token %} 
+          <h3>Update data</h3>
+          <h4>Contact us today, and get reply with in 24 hours!</h4>
+          <fieldset>
+            <input placeholder="Your name" type="text" value = "{{data.name}}"  name = "fname" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Email Address" value = "{{data.user_email}}" type="email" name = "email" tabindex="2" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Phone Number" value = "{{data.phon_nmbr}}" type="tel" name = "mob" tabindex="3" required>
+          </fieldset>
+          <fieldset>
+            <textarea placeholder="Type your Message Here...." name = "msg" tabindex="5" required>{{data.message}}</textarea>
+          </fieldset>
+          <fieldset>
+            <button name="Update" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+          </fieldset>
+        </form>
+       
+        
+      </div>
+</body>
+</html>
